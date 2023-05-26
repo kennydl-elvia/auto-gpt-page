@@ -30,14 +30,13 @@ jobs:
         run: |
           npm run build
 
-      # - name: Deploy to gh pages
-      #   run: |
-      #     git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/kennydl-elvia/auto-gpt-page
-      #     cp dist auto-gpt-page
-      #     cd auto-gpt-page
-      #     mv LivingDoc.html index.html
-      #     git add .
-      #     git config --global user.email "<>"
-      #     git config --global user.name "funplace-api-github-bot":wq
-      #     git diff-index --quiet HEAD || git commit -m "Automatic publish of specflow living doc"
-      #     git push
+      - name: Deploy to gh pages
+        run: |
+          git checkout deploy
+          cd dist
+          git add .
+          git config --global user.email "<>"
+          git config --global user.name "deploy-auto-gpt-pages-action":wq
+          git config --global user.name "funplace-api-github-bot":wq
+          git diff-index --quiet HEAD || git commit -m "Deploy gh pages"
+          git push
