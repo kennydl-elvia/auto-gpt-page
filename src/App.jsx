@@ -1,9 +1,13 @@
+import { useState } from 'react';
+
 function App() {
+  const [showHello, setShowHello] = useState(false);
+
   return (
     <>
-      <h1>Auto GPT Page</h1>
+      {showHello ? <div>Hello from AI</div> : <button onClick={() => setShowHello(true)}>Click me</button>}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
