@@ -39,7 +39,7 @@ jobs:
       - name: Deploy to gh pages
         run: |
           rm -r assets
-          mv ./dist/* .
+          mv -f ./dist/* .
           git add .
           git config --global user.email "<>"
           git config --global user.name "deploy-auto-gpt-pages-action":wq
