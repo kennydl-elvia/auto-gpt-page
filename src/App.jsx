@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className='container'>
-      {showHello ? <div>Hello from AI</div> : <button style={{backgroundColor: 'violet'}} onClick={() => setShowHello(true)}>Click me</button>}
+      {showHello ? <div><div>Hello from AI</div><div>{'Did you know that the first computer mouse was made of wood?'}</div></div> : <button style={{backgroundColor: 'violet'}} onClick={() => setShowHello(true)}>Click me</button>}
     </div>
   );
 }

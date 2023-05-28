@@ -1,3 +1,10 @@
 .container {
   margin: 50px 15%;
 }
+
+.container div {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
