@@ -38,6 +38,7 @@ jobs:
 
       - name: Deploy to gh pages
         run: |
+          rm -r assets
           mv ./dist/* .
           git add .
           git config --global user.email "<>"
