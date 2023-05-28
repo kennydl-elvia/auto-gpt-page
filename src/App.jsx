@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import './App.css';
 
 function App() {
   const [showHello, setShowHello] = useState(false);
 
   return (
-    <>
-      {showHello ? <div>Hello from AI</div> : <button onClick={() => setShowHello(true)}>Click me</button>}
-    </>
+    <div className='container'>
+      {showHello ? <div>Hello from AI</div> : <button style={{backgroundColor: 'violet'}} onClick={() => setShowHello(true)}>Click me</button>}
+    </div>
   );
 }
 
